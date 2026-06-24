@@ -17,7 +17,7 @@ static def releaseTime() {
     return new Date().format("yy.MMddHH", TimeZone.getTimeZone("GMT+8"))
 }
 
-def version = "1." + releaseTime()
+def version = "1.25.071413" // pinned to reproduce original 1.25 build (was: "1." + releaseTime())
 def gitCommits = Integer.parseInt('git rev-list HEAD --count'.execute().text.trim())
 
 android {
